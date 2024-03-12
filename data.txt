@@ -1,0 +1,28 @@
+{
+   "users": [
+   ],
+   "books": [
+      {
+         "title": "es",
+         "author": "dr",
+         "isbn": 45
+      },
+      {
+         "title": "sd",
+         "author": "df",
+         "isbn": 34
+      },
+      {
+         "title": "as",
+         "author": "sdf",
+         "isbn": 5
+      },
+      {
+         "title": "a",
+         "author": "s",
+         "isbn": 2
+      }
+   ],
+   "check-in": [],
+   "check-out": []
+}
