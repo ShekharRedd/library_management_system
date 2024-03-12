@@ -45,9 +45,9 @@ class BookManagement:
         update_bk=st.update_book(isbn)
         # print(update_bk)
         if update_bk :
-            print("successfully update the book")
+            print(update_bk)
         else:
-            print("Please enter correct isbn number")
+            print(update_bk)
 
     def delete_books(self,isbn):
         print("welcome to")
@@ -65,7 +65,7 @@ class BookManagement:
         if search_bk :
             print("Book Exist  :",search_bk)
         else :
-            print("please enter correct isbn number :")
+            print("No books exist")
 
 
         

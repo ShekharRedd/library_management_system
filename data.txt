@@ -1,28 +1,42 @@
 {
-   "users": [
-   ],
-   "books": [
-      {
-         "title": "es",
-         "author": "dr",
-         "isbn": 45
-      },
-      {
-         "title": "sd",
-         "author": "df",
-         "isbn": 34
-      },
-      {
-         "title": "as",
-         "author": "sdf",
-         "isbn": 5
-      },
-      {
-         "title": "a",
-         "author": "s",
-         "isbn": 2
-      }
-   ],
-   "check-in": [],
-   "check-out": []
+  "users": [
+    {
+      "name": "ramesh",
+      "user_id": 123
+    },
+    {
+      "name": "suresh",
+      "user_id": 121
+    }
+  ],
+  "books": [
+    {
+      "title": "python",
+      "author": "Guido van Rossum",
+      "isbn": 556
+    },
+    {
+      "title": "java",
+      "author": "James Gosling",
+      "isbn": 45
+    },
+    {
+      "title": "se",
+      "author": "d",
+      "isbn": 34
+    }
+  ],
+  "check-in": [
+    {
+      "title": "python",
+      "author": "Guido van Rossum",
+      "isbn": 556
+    },
+    {
+      "title": "se",
+      "author": "d",
+      "isbn": 34
+    }
+  ],
+  "check-out": []
 }

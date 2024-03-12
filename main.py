@@ -141,7 +141,7 @@ def main():
         elif choice == '4':
             tb.log_operation(f"{choice} Checkout Management ")
             isbn=int(input("Enter the isbn numerb to borrow : "))
-            sco.check_out(isbn)
+            sco.check_out_book_list(isbn)
         elif choice == '5':
             tb.log_operation(f"{choice} Checkin Management ")
             isbn=int(input("Enter the isbn numerb to check-in : "))

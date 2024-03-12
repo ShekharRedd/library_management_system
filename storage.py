@@ -192,39 +192,43 @@ class Storage_Books:
     #         print("Book with ISBN", isbn, "not found.")
     #         return False
 
+    
     def delete_book(self, isbn):
         try:
             with open(Storage_Books.filename, "r") as filename:
                 data = json.load(filename)
                 check_in = data.get("check-in", [])
-                delete_bk = data.get("books", [])
+                books = data.get("books", [])
         except Exception as ex:
             print("Invalid request:", ex)
             return False
-        
-        print("Books to delete:", delete_bk)  # Print the contents of delete_bk
-        
-        found_index = None
-        
-        print("before loop")
-        for i, book in enumerate(delete_bk):
-            print("isbn",book["isbn"])
-            print("fesfefes",isbn)
-            print("inside the loop")
+            
+        print("Books to delete:", books)  # Print the contents of the books list
+            
+        # Find the index of the book with the given ISBN in both lists
+        book_index = None
+        for i, book in enumerate(books):
             if book["isbn"] == isbn:
-                found_index = i
-                print(found_index)
+                book_index = i
                 break
-        print("after loop")
-        print("foud",found_index)
-        if found_index:
-            delete_bk.pop(found_index)
-            check_in.pop(found_index)
-            print("found indexwdqefefwewfewf")
+
+        if book_index is not None:
+            # Remove the book from the books list
+            deleted_book = books.pop(book_index)
+            
+            # Remove the corresponding entry from the check-in list
+            if book_index < len(check_in):
+                check_in.pop(book_index)
+            
+            # Update the data dictionary with the modified lists
+            data["books"] = books
+            data["check-in"] = check_in
+
             try:
                 with open(Storage_Books.filename, "w") as filename:
                     json.dump(data, filename, indent=3)
                 print("Book deleted successfully.")
+                # Log the operatio
                 return True
             except Exception as ex:
                 print("Error writing to file:", ex)
@@ -232,6 +236,8 @@ class Storage_Books:
         else:
             print("Book with ISBN", isbn, "not found.")
             return False
+
+
                 
 
 
@@ -315,7 +321,7 @@ class Storage_Check_Out:
     def __init__(self) -> None:
         pass
     
-    def check_out(self, isbn):
+    def check_out_book_list(self, isbn):
         try:
             with open(Storage_Check_Out.filename, "r") as file:
                 data = json.load(file)
@@ -346,7 +352,7 @@ class Storage_Check_Out:
                     print("Error writing to file:", ex)
                     return False
             else:
-                print("Book is not available. Already borrowed.")
+                print("Book is not available. Please check-in list or Already borrowed.")
                 return False
         else:
             print("Invalid book.")
