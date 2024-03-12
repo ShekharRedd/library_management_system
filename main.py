@@ -1,6 +1,8 @@
 from book import BookManagement
 from user import UserManagement
-from storage import Storage_Check_In, Storage_Check_Out, Add_Book_Checkin, Track_Book
+from storage import Add_Book_Checkin, Track_Book
+
+from check import Storage_Check_In, Storage_Check_Out
 
 book_management = BookManagement()
 user_management = UserManagement()

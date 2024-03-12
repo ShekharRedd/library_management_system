@@ -26,7 +26,8 @@
       "isbn": 34
     }
   ],
-  "check-in": [
+  "check-in": [],
+  "check-out": [
     {
       "title": "python",
       "author": "Guido van Rossum",
@@ -37,6 +38,5 @@
       "author": "d",
       "isbn": 34
     }
-  ],
-  "check-out": []
+  ]
 }
