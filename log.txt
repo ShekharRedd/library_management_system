@@ -1,6 +1,0 @@
-2024-03-12 20:49:47: 1 Main Page
-2024-03-12 20:49:51: 4 User Management
-2024-03-12 20:49:54: 4 Main Page
-2024-03-12 20:49:54: 4 Checkout Management 
-2024-03-12 20:50:06: 4 Main Page
-2024-03-12 20:50:06: 4 Checkout Management 
